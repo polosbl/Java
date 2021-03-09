@@ -1,3 +1,5 @@
+package Lesson2.Classwork;
+
 public class while5 {
     public static void main(String[] args) {
         // Выведите на экран последовательность всех чисел Фибоначчи, которые меньше 100:

@@ -1,3 +1,5 @@
+package Lesson2.Classwork;
+
 public class break1 {
     public static void main(String[] args) {
 //      Объявите переменную m типа int. Выясните, есть ли в записи этого числа хотя бы одна тройка.

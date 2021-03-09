@@ -1,3 +1,5 @@
+package Lesson2.Classwork;
+
 public class For3 {
     public static void main(String[] args) {
         int m = 3;

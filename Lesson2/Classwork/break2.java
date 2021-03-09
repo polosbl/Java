@@ -1,3 +1,5 @@
+package Lesson2.Classwork;
+
 public class break2 {
     public static void main(String[] args) {
 //      Объявите переменные m и n типа int (m < n).

@@ -1,3 +1,5 @@
+package Lesson2.Classwork;
+
 public class while3 {
     public static void main(String[] args) {
         //Выведите на экран все степени двойки от 1 до 1024

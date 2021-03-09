@@ -1,3 +1,5 @@
+package Lesson2.Classwork;
+
 public class while4 {
     public static void main(String[] args) {
         // Объявите целочисленную переменную m и присвойте ей положительное значение. Выведите на экран это число наоборот:
