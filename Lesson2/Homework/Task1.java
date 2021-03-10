@@ -6,13 +6,13 @@ public class Task1 {
 //        Каждый день он увеличивал дневную норму на 10% нормы предыдущего дня.
 //        Какой суммарный путь пробежит спортсмен за 7 дней?
 
-        double daily = 10.0;
-        double dist = daily;
+        double dailyDistance = 10.0;
+        double overallDistance = dailyDistance;
 
-        for (int i = 1; i <= 7; i++) {
-            daily = daily + (daily * 10 / 100);
-            dist += daily;
+        for (int i = 1; i < 7; i++) {
+            dailyDistance *= 1.1;
+            overallDistance += dailyDistance;
         }
-        System.out.println(dist);
+        System.out.println(overallDistance);
     }
 }

@@ -5,11 +5,11 @@ public class Task7 {
 //        Напишите программу, определяющую сумму всех нечетных чисел от 1 до 99
 
         int sum = 0;
+        int i = 1;
 
-        for (int i = 1; i < 100; i++) {
-            if (i % 2 == 1) {
-                sum += i;
-            }
+        while (i < 100) {
+            sum += i;
+            i += 2;
         }
         System.out.println(sum);
     }

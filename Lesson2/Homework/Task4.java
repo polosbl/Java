@@ -4,13 +4,13 @@ public class Task4 {
     public static void main(String[] args) {
 //        Составьте программу, вычисляющую A*B, не пользуясь операцией умножения.
 
-        int A = 7;
-        int B = 8;
-        int res = 0;
+        int a = 7;
+        int b = 8;
+        int result = 0;
 
-        for (int i = 1; i <= B; i++) {
-            res += A;
+        for (int i = 1; i <= b; i++) {
+            result += a;
         }
-        System.out.println(res);
+        System.out.println("A * B = " + result);
     }
 }

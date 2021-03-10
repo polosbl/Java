@@ -5,13 +5,13 @@ public class Task2 {
 //        Одноклеточная амеба каждые 3 часа делится на 2 клетки.
 //        Определить, сколько амеб будет через 3, 6, 9, 12,..., 24 часа.
 
-        int klet = 1;
+        int kletka = 1;
+        int i = 3;
 
-        for (int i = 3; i <= 24; i++) {
-            if (i % 3 == 0){
-                klet *= 2;
-            }
+        while (i <= 24) {
+            kletka *= 2;
+            i += 3;
         }
-        System.out.println(klet);
+        System.out.println(kletka);
     }
 }

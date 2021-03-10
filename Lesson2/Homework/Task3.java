@@ -7,7 +7,7 @@ public class Task3 {
         int i = 1;
         int sum = 0;
 
-        while (i <= 16) {
+        while (i <= 256) {
             sum += i;
             i *= 2;
         }
