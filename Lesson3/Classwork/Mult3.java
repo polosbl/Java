@@ -28,7 +28,6 @@ public class Mult3 {
                     sum += arrayInt[j][i];
             }
             System.out.print(sum + "\t");
-
         }
     }
 }
