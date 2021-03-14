@@ -1,12 +1,10 @@
-package Lesson3.Classwork;
+package Lesson3.Homework.Odnomern;
 
 import java.util.Scanner;
 
-public class Task9 {
+public class TaskDop9 {
     public static void main(String[] args) {
-//        Удалите все отрицательные числа из массива,
-//        сдвиньте оставшиеся элементы влево, заполняя образовавшиеся пробелы.
-//        Образовавшиеся в результате пробелы справа заполните нулями.
+//        Найти наименьший элемент среди элементов с четными индексами массива
 
         // Вводим размер массива
         Scanner scanner = new Scanner(System.in);
@@ -21,23 +19,25 @@ public class Task9 {
         // Генерируем массив нужного размера и выводим на экран
         int[] arrayInt = new int[length];
         for (int i = 0; i < arrayInt.length; i++) {
-            arrayInt[i] = (int) (Math.random() * 41) - 20;
+            arrayInt[i] = (int) (Math.random() * 1001);
             System.out.print(arrayInt[i] + " ");
         }
         System.out.println("\n");
 
-        int[] newArray = new int[length];
-
-        for (int i = 0, j = 0; i < arrayInt.length; i++) {
-            if (arrayInt[i] >= 0) {
-                newArray[j] = arrayInt[i];
-                j++;
+        if (length <= 2) {
+            System.out.println("В массиве нет четных индексов (2 и более)");
+        } else {
+            int min = Integer.MAX_VALUE;
+            int i = 2;
+            // Ищем наименьший элемент с четным индексом
+            while (i < arrayInt.length) {
+                if (arrayInt[i] < min) {
+                    min = arrayInt[i];
+                }
+                i += 2;
             }
+            System.out.println("Наименьший элемент с четным индексом массива: " + min);
         }
 
-        // Выводим получившийся массив
-        for (int i = 0; i < newArray.length; i++) {
-            System.out.print(newArray[i] + " ");
-        }
     }
 }

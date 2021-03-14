@@ -1,12 +1,11 @@
-package Lesson3.Classwork;
+package Lesson3.Homework.Odnomern;
 
 import java.util.Scanner;
 
-public class Task9 {
+public class TaskDop1 {
     public static void main(String[] args) {
-//        Удалите все отрицательные числа из массива,
-//        сдвиньте оставшиеся элементы влево, заполняя образовавшиеся пробелы.
-//        Образовавшиеся в результате пробелы справа заполните нулями.
+//        Найти произведение элементов, кратных 3.
+//        Значения [0,20]
 
         // Вводим размер массива
         Scanner scanner = new Scanner(System.in);
@@ -21,23 +20,22 @@ public class Task9 {
         // Генерируем массив нужного размера и выводим на экран
         int[] arrayInt = new int[length];
         for (int i = 0; i < arrayInt.length; i++) {
-            arrayInt[i] = (int) (Math.random() * 41) - 20;
+            arrayInt[i] = (int) (Math.random() * 21);
             System.out.print(arrayInt[i] + " ");
         }
         System.out.println("\n");
 
-        int[] newArray = new int[length];
-
-        for (int i = 0, j = 0; i < arrayInt.length; i++) {
-            if (arrayInt[i] >= 0) {
-                newArray[j] = arrayInt[i];
-                j++;
+        // Считаем среднее арифметическое элементов, кратных 3
+        int sum = 0;
+        int count = 0;
+        for (int i = 0; i < arrayInt.length; i++) {
+            if (arrayInt[i] % 3 == 0) {
+                sum += arrayInt[i];
+                count++;
             }
         }
+        double average = (double) sum / count;
+        System.out.println("Среднее арифметическое элементов, кратных 3: " + average);
 
-        // Выводим получившийся массив
-        for (int i = 0; i < newArray.length; i++) {
-            System.out.print(newArray[i] + " ");
-        }
     }
 }

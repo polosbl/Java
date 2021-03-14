@@ -1,12 +1,10 @@
-package Lesson3.Classwork;
+package Lesson3.Homework.Odnomern;
 
 import java.util.Scanner;
 
-public class Task9 {
+public class TaskDop4 {
     public static void main(String[] args) {
-//        Удалите все отрицательные числа из массива,
-//        сдвиньте оставшиеся элементы влево, заполняя образовавшиеся пробелы.
-//        Образовавшиеся в результате пробелы справа заполните нулями.
+//        Найти наименьший нечетный элемент.
 
         // Вводим размер массива
         Scanner scanner = new Scanner(System.in);
@@ -21,23 +19,19 @@ public class Task9 {
         // Генерируем массив нужного размера и выводим на экран
         int[] arrayInt = new int[length];
         for (int i = 0; i < arrayInt.length; i++) {
-            arrayInt[i] = (int) (Math.random() * 41) - 20;
+            arrayInt[i] = (int) (Math.random() * 1_001);
             System.out.print(arrayInt[i] + " ");
         }
         System.out.println("\n");
 
-        int[] newArray = new int[length];
+        int minOdd = Integer.MAX_VALUE;
 
-        for (int i = 0, j = 0; i < arrayInt.length; i++) {
-            if (arrayInt[i] >= 0) {
-                newArray[j] = arrayInt[i];
-                j++;
+        // Ищем наименьший нечетный элемент
+        for (int i = 0; i < arrayInt.length; i++) {
+            if (arrayInt[i] % 2 == 1 && arrayInt[i] < minOdd) {
+                minOdd = arrayInt[i];
             }
         }
-
-        // Выводим получившийся массив
-        for (int i = 0; i < newArray.length; i++) {
-            System.out.print(newArray[i] + " ");
-        }
+        System.out.println("Наименьший нечетный элемент: " + minOdd);
     }
 }
