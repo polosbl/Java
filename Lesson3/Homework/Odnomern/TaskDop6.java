@@ -24,12 +24,12 @@ public class TaskDop6 {
         }
         System.out.println("\n");
 
-        for (int i = 0; i < arrayInt1.length; i++) {
+        OUTER: for (int i = 0; i < arrayInt1.length; i++) {
             int j = i + 1;
             while (j < arrayInt1.length) {
                 if (arrayInt1[j] == arrayInt1[i]) {
                     System.out.println("Есть повторяющиеся");
-                    break;
+                    break OUTER;
                 }
                 j++;
             }

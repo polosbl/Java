@@ -28,7 +28,7 @@ public class TaskDop5 {
         int[] arrayInt2 = new int[length];
 
         for (int i = 0, j = 0; i < arrayInt1.length; i++) {
-            if (i % 2 == 1) {
+            if (i % 2 == 0) {
                 arrayInt2[j] = arrayInt1[i];
                 j++;
             }
