@@ -46,7 +46,7 @@ public class Computer {
         }
 
         int number = (int) (Math.random() * 2);
-        System.out.println(number);
+//        System.out.println("Загаданное число (для проверки) " + number);
 
         System.out.println("Угадай))");
         int guess = scanner.nextInt();
@@ -71,7 +71,7 @@ public class Computer {
         }
 
         int number = (int) (Math.random() * 2);
-        System.out.println(number);
+//        System.out.println("Загаданное число (для проверки) " + number);
 
         System.out.println("Угадай))");
         int guess = scanner.nextInt();
