@@ -8,8 +8,15 @@ public class Main {
 
         comp1.turnOn();
         System.out.println(comp1.cyclesLeft + "\n");
+        comp1.turnOff();
+        System.out.println(comp1.cyclesLeft + "\n");
+
+        comp1.turnOff();
+        System.out.println(comp1.cyclesLeft + "\n");
+
         comp1.turnOn();
         System.out.println(comp1.cyclesLeft + "\n");
-        comp1.turnOn();
+        comp1.turnOff();
+        System.out.println(comp1.cyclesLeft + "\n");
     }
 }

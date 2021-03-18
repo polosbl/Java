@@ -37,25 +37,26 @@ public class Computer {
     void turnOn() {
         Scanner scanner = new Scanner(System.in);
 
-        if (this.isDead == true) {
+        if (this.isDead) {
             System.out.println("Комп уже сдох. Включить не получится");
             return;
         } else if (this.cyclesLeft == 0) {
             System.out.println("Комп уже сдох. Отработал своё");
             return;
+        } else if (!this.isOn) {
+            System.out.println("Комп уже включен");
+            return;
         }
 
         int number = (int) (Math.random() * 2);
-//        System.out.println("Загаданное число (для проверки) " + number);
+        System.out.println("Загаданное число (для проверки) " + number);
 
-        System.out.println("Угадай))");
+        System.out.println("Угадай 0 или 1, чтобы включить без проблем))");
         int guess = scanner.nextInt();
 
         if (guess == number) {
             System.out.println("Комп включился");
             this.isOn = true;
-            turnOff();
-            this.cyclesLeft--;
         } else {
             this.isDead = true;
             System.out.println("Комп сдох((");
@@ -65,21 +66,24 @@ public class Computer {
     void turnOff(){
         Scanner scanner = new Scanner(System.in);
 
-        if (this.isOn == false) {
-            System.out.println("Комп выключен");
+        if (this.isDead) {
+            System.out.println("Комп уже сдох. Выключить не получится");
+            return;
+        } else if (!this.isOn) {
+            System.out.println("Комп уже выключен");
             return;
         }
 
         int number = (int) (Math.random() * 2);
-//        System.out.println("Загаданное число (для проверки) " + number);
+        System.out.println("Загаданное число (для проверки) " + number);
 
-        System.out.println("Угадай))");
+        System.out.println("Угадай 0 или 1, чтобы выключить без проблем))");
         int guess = scanner.nextInt();
 
         if (guess == number) {
             System.out.println("Комп выключился");
             this.isOn = false;
-            return;
+            this.cyclesLeft--;
         } else {
             this.isDead = true;
             System.out.println("Комп сдох((");
