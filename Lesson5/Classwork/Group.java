@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Group {
     static int overallNumberOfGroups;
     private static String[] groups = new String[3];
-    private int index = 0;
+    static int index = 0;
 
     private Student[] students;
     private String id;
@@ -27,17 +27,19 @@ public class Group {
         }
         this.students = new Student[i];
 
-        if (groups[index] == null) {
-            groups[index] = this.id;
-            index++;
+        if (index == groups.length) {
+            groups = Arrays.copyOf(groups, groups.length * 2);
         }
+
+        for (int j = 0; j < groups.length; j++) {
+            if (groups[index] == null) {
+                groups[index] = this.id;
+                index++;
+                break;
+            }
+        }
+        overallNumberOfGroups++;
     }
-//        else {
-//            index = 0;
-//            int newLength = groups.length * 2;
-//            String[] newGroups = new String[newLength];
-//            newGroups[index];
-//        }
 
     void addStudent(Student student) {
         for (int i = 0; i < students.length; i++) {
