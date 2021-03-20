@@ -4,6 +4,12 @@ public class Rectangle extends GeometricalFigure {
     protected double width;
     protected double height;
 
+    Rectangle(Point center, double width, double height) {
+        super(center);
+        this.width = width;
+        this.height = height;
+    }
+
     public double getWidth() {
         return width;
     }
@@ -13,20 +19,17 @@ public class Rectangle extends GeometricalFigure {
 
     @Override
     public String getFigureType() {
-        String figureType = "Rectangle";
-        return figureType;
+        return "Rectangle";
     }
 
     @Override
     public double getArea() {
-        double area = width * height;
-        return area;
+        return width * height;
     }
 
     @Override
     public double getPerimeter () {
-        double perimeter = 2 * width + 2 * height;
-        return perimeter;
+        return 2 * width + 2 * height;
     }
 
     @Override
@@ -36,11 +39,7 @@ public class Rectangle extends GeometricalFigure {
         double yMin = getCenter().getY() - height / 2.0;
         double yMax = getCenter().getY() + height / 2.0;
 
-        if (point.getX() >= xMin && point.getX() <= xMax && point.getY() >= yMin && point.getY() <= yMax) {
-            return true;
-        } else {
-            return false;
-        }
+        return (point.getX() >= xMin && point.getX() <= xMax && point.getY() >= yMin && point.getY() <= yMax);
     }
 
     @Override
@@ -53,11 +52,4 @@ public class Rectangle extends GeometricalFigure {
         System.out.println("Периметр: "+ getPerimeter());
         System.out.print('\n');
     }
-
-    Rectangle(Point center, double width, double height) {
-        super(center);
-        this.width = width;
-        this.height = height;
-    }
-
 }

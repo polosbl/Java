@@ -3,36 +3,34 @@ package Lesson5.Classwork2;
 public class Circle extends GeometricalFigure {
     private double radius;
 
+    Circle (Point center, double radius) {
+        super(center);
+        this.radius = radius;
+    }
+
     public double getRadius() {
         return radius;
     }
 
     @Override
     public String getFigureType() {
-        String figureType = "Circle";
-        return figureType;
+        return "Circle";
     }
 
     @Override
     public double getArea() {
-        double area = Math.PI * radius * radius;
-        return area;
+        return Math.PI * radius * radius;
     }
 
     @Override
     public double getPerimeter () {
-        double perimeter = 2 * Math.PI * radius;
-        return perimeter;
+        return 2 * Math.PI * radius;
     }
 
     @Override
     public boolean containsPoint(Point point) {
-        if ((point.getX() - getCenter().getX())*(point.getX() - getCenter().getX()) + (point.getY() - getCenter().getY())*(point.getY() - getCenter().getY()) < radius * radius) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return ((point.getX() - getCenter().getX())*(point.getX() - getCenter().getX()) +
+                (point.getY() - getCenter().getY())*(point.getY() - getCenter().getY()) < radius * radius);
     }
 
     @Override
@@ -43,10 +41,5 @@ public class Circle extends GeometricalFigure {
         System.out.println("Площадь: " + getArea());
         System.out.println("Периметр: "+ getPerimeter());
         System.out.print('\n');
-    }
-
-    Circle (Point center, double radius) {
-        super(center);
-        this.radius = radius;
     }
 }

@@ -3,11 +3,11 @@ package Lesson5.Classwork;
 import java.util.Scanner;
 
 public class Student {
-    static int overallNumberOfStudents;
+    private static int overallNumberOfStudents;
 
-    String firstName;
-    String lastName;
-    int age;
+    private String firstName;
+    private String lastName;
+    private int age;
 
 //    Конструктор, который просит ввести значения
     Student() {
@@ -22,13 +22,6 @@ public class Student {
 
         overallNumberOfStudents++;
     }
-
-//    Конструктор принимающий параметры
-//    Student(String firstName, String lastName, int age) {
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.age = age;
-//    }
 
     static int getOverallNumberOfStudents() {
         return overallNumberOfStudents;
@@ -47,7 +40,7 @@ public class Student {
         return firstName + " " + lastName;
     }
 
-    String addPrefix(String prefix) {
+    private String addPrefix(String prefix) {
         return prefix + getFullName();
     }
 
