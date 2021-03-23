@@ -4,7 +4,7 @@ public class Rectangle extends GeometricalFigure {
     protected double width;
     protected double height;
 
-    Rectangle(Point center, double width, double height) {
+    public Rectangle(Point center, double width, double height) {
         super(center);
         this.width = width;
         this.height = height;
@@ -34,12 +34,12 @@ public class Rectangle extends GeometricalFigure {
 
     @Override
     public boolean containsPoint(Point point) {
-        double xMin = getCenter().getX() - width / 2.0;
-        double xMax = getCenter().getX() + width / 2.0;
-        double yMin = getCenter().getY() - height / 2.0;
-        double yMax = getCenter().getY() + height / 2.0;
+        double xMin = getCenter().getX() - width / 2;
+        double xMax = getCenter().getX() + width / 2;
+        double yMin = getCenter().getY() - height / 2;
+        double yMax = getCenter().getY() + height / 2;
 
-        return (point.getX() >= xMin && point.getX() <= xMax && point.getY() >= yMin && point.getY() <= yMax);
+        return point.getX() >= xMin && point.getX() <= xMax && point.getY() >= yMin && point.getY() <= yMax;
     }
 
     @Override

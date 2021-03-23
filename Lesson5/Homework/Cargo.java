@@ -3,7 +3,7 @@ package Lesson5.Homework;
 public class Cargo extends Land {
     private double liftingCapacity;
 
-    Cargo (double power, double maxSpeed, double mass, String brand, int numberOfWheels, double fuelConsumption,
+    public Cargo (double power, double maxSpeed, double mass, String brand, int numberOfWheels, double fuelConsumption,
                double liftingCapacity) {
         super(power,maxSpeed,mass,brand,numberOfWheels,fuelConsumption);
         this.liftingCapacity = liftingCapacity;

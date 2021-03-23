@@ -6,7 +6,7 @@ public abstract class Transport {
     private double mass;
     private String brand;
 
-    Transport(double power, double maxSpeed, double mass, String brand) {
+    public Transport(double power, double maxSpeed, double mass, String brand) {
         this.power = power;
         this.maxSpeed = maxSpeed;
         this.mass = mass;

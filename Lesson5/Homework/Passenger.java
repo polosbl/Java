@@ -4,7 +4,7 @@ public class Passenger extends Land {
     private String bodyType;
     private int numberOfPassengers;
 
-    Passenger (double power, double maxSpeed, double mass, String brand, int numberOfWheels, double fuelConsumption,
+    public Passenger (double power, double maxSpeed, double mass, String brand, int numberOfWheels, double fuelConsumption,
                String bodyType, int numberOfPassengers) {
         super(power,maxSpeed,mass,brand,numberOfWheels,fuelConsumption);
         this.bodyType = bodyType;
@@ -35,11 +35,21 @@ public class Passenger extends Land {
         System.out.print("\n");
     }
 
-    public void calculateDistance(double time) {
-        double distance = time * this.getMaxSpeed();
-        double fuelConsumption = Math.ceil(distance / getFuelConsumption() * Math.pow(10, 1)) / Math.pow(10, 1);
-        System.out.println("За время " + time + " ч, автомобиль " + this.getBrand() + " двигаясь с максимальной скоростью " +
-                this.getMaxSpeed() + " км/ч проедет " + distance + " км и израсходует " + fuelConsumption + " литров топлива." + "\n");
-
+    private double getFuelConsumption(double distance) {
+        return Math.ceil(distance / 100 * getFuelConsumption() * Math.pow(10, 1)) / Math.pow(10, 1);
     }
+
+    public void calculateDistance(double time) {
+        System.out.println("За время " + time + " ч, автомобиль " + getBrand() + " двигаясь с максимальной скоростью " +
+                getMaxSpeed() + " км/ч проедет " + time * getMaxSpeed() + " км и израсходует "
+                + getFuelConsumption(time * getMaxSpeed()) + " литров топлива." + "\n");
+    }
+
+//    public void calculateDistance(double time) {
+//        double distance = time * this.getMaxSpeed();
+//        double fuelConsumption = Math.ceil(distance / 100 * getFuelConsumption() * Math.pow(10, 1)) / Math.pow(10, 1);
+//        System.out.println("За время " + time + " ч, автомобиль " + this.getBrand() + " двигаясь с максимальной скоростью " +
+//                this.getMaxSpeed() + " км/ч проедет " + distance + " км и израсходует " + fuelConsumption + " литров топлива." + "\n");
+//
+//    }
 }

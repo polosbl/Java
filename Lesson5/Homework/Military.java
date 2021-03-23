@@ -4,7 +4,7 @@ public class Military extends Air {
     private boolean haveCatapultSystem;
     private int rocketsOnBoard;
 
-    Military (double power, double maxSpeed, double mass, String brand, double wingspan, double minRunwayLength,
+    public Military (double power, double maxSpeed, double mass, String brand, double wingspan, double minRunwayLength,
            int rocketsOnBoard, boolean haveCatapultSystem) {
         super(power,maxSpeed,mass,brand,wingspan,minRunwayLength);
         this.rocketsOnBoard = rocketsOnBoard;
@@ -36,10 +36,13 @@ public class Military extends Air {
     }
 
     public void fire() {
-        for (int i = 1; i <= this.rocketsOnBoard; i++) {
-            System.out.println("Ракета пошла...");
+        int i = 1;
+        if (i <= this.rocketsOnBoard) {
+            System.out.println("Ракета пошла..." + "\n");
+            this.rocketsOnBoard--;
+        } else {
+            System.out.println("Боеприпасы отсутствуют" + "\n");
         }
-        System.out.println("Боеприпасы отсутствуют" + "\n");
     }
 
     public void catapult() {

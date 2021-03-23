@@ -43,7 +43,7 @@ public class Computer {
         } else if (this.cyclesLeft == 0) {
             System.out.println("Комп уже сдох. Отработал своё");
             return;
-        } else if (!this.isOn) {
+        } else if (this.isOn) {
             System.out.println("Комп уже включен");
             return;
         }
@@ -60,6 +60,7 @@ public class Computer {
         } else {
             this.isDead = true;
             System.out.println("Комп сдох((");
+            this.cyclesLeft = 0;
         }
     }
 
@@ -87,6 +88,7 @@ public class Computer {
         } else {
             this.isDead = true;
             System.out.println("Комп сдох((");
+            this.cyclesLeft = 0;
         }
     }
 }

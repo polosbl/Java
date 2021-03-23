@@ -3,7 +3,7 @@ package Lesson5.Classwork2;
 public class Circle extends GeometricalFigure {
     private double radius;
 
-    Circle (Point center, double radius) {
+    public Circle (Point center, double radius) {
         super(center);
         this.radius = radius;
     }
@@ -29,8 +29,8 @@ public class Circle extends GeometricalFigure {
 
     @Override
     public boolean containsPoint(Point point) {
-        return ((point.getX() - getCenter().getX())*(point.getX() - getCenter().getX()) +
-                (point.getY() - getCenter().getY())*(point.getY() - getCenter().getY()) < radius * radius);
+        return (point.getX() - getCenter().getX())*(point.getX() - getCenter().getX()) +
+                (point.getY() - getCenter().getY())*(point.getY() - getCenter().getY()) < radius * radius;
     }
 
     @Override

@@ -16,8 +16,11 @@ public class Main {
         plane1.load(15);
         plane1.load(43);
 
-        Military plane2 = new Military(1300,1100,4500,"МиГ",11,280,8,true);
+        Military plane2 = new Military(1300,1100,4500,"МиГ",11,280,2,true);
         plane2.printInformation();
+        plane2.fire();
+        plane2.fire();
+        plane2.fire();
         plane2.fire();
         plane2.catapult();
 

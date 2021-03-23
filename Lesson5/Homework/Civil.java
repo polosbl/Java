@@ -4,7 +4,7 @@ public class Civil extends Air {
     private int numberOfPassengers;
     private boolean haveBusinessClass;
 
-    Civil (double power, double maxSpeed, double mass, String brand, double wingspan, double minRunwayLength,
+    public Civil (double power, double maxSpeed, double mass, String brand, double wingspan, double minRunwayLength,
            int numberOfPassengers, boolean haveBusinessClass) {
         super(power,maxSpeed,mass,brand,wingspan,minRunwayLength);
         this.numberOfPassengers = numberOfPassengers;
@@ -12,7 +12,7 @@ public class Civil extends Air {
     }
 
     public int getNumberOfPassengers() {
-        return this.getNumberOfPassengers();
+        return this.numberOfPassengers;
     }
 
     public boolean isHaveBusinessClass() {
