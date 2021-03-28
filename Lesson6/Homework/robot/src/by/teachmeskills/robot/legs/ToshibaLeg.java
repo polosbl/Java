@@ -7,9 +7,6 @@ public class ToshibaLeg implements ILeg{
         this.price = price;
     }
 
-    public ToshibaLeg () {
-    }
-
     @Override
     public int getPrice() {
         return price;

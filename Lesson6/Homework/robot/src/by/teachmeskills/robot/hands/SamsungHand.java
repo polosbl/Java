@@ -9,9 +9,6 @@ public class SamsungHand implements IHand {
         this.price = price;
     }
 
-    public SamsungHand () {
-    }
-
     @Override
     public int getPrice() {
         return price;

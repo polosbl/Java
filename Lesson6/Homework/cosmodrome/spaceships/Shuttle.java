@@ -2,18 +2,12 @@ package Lesson6.Homework.cosmodrome.spaceships;
 
 public class Shuttle implements IStart {
 
-    public Shuttle () {
+    public Shuttle() {
     }
 
     @Override
     public boolean prelaunchSystemCheck() {
-        int number = (int) (Math.random() * 11);
-
-        if (number > 3) {
-            return true;
-        } else {
-            return false;
-        }
+        return (int) (Math.random() * 11) > 3;
     }
 
     @Override

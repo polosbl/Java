@@ -7,13 +7,7 @@ public class Vostok implements IStart {
 
     @Override
     public boolean prelaunchSystemCheck() {
-        int number = (int) (Math.random() * 11);
-
-        if (number > 3) {
-            return true;
-        } else {
-            return false;
-        }
+        return (int) (Math.random() * 11) > 3;
     }
 
     @Override

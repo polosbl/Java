@@ -7,9 +7,6 @@ public class SamsungHead implements IHead {
         this.price = price;
     }
 
-    public SamsungHead() {
-    }
-
     @Override
     public void speak() {
         System.out.println("Говорит голова Samsung");

@@ -2,9 +2,6 @@ package Lesson6.Homework.human.shoes;
 
 public class AdidasShoes implements IShoes {
 
-    public AdidasShoes() {
-    }
-
     @Override
     public void putOn() {
         System.out.println("Надета обувь Adidas");

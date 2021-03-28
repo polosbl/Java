@@ -7,9 +7,6 @@ public class SonyHand implements IHand{
         this.price = price;
     }
 
-    public SonyHand () {
-    }
-
     @Override
     public int getPrice() {
         return price;

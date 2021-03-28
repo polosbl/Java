@@ -7,9 +7,6 @@ public class SonyLeg implements ILeg{
         this.price = price;
     }
 
-    public SonyLeg () {
-    }
-
     @Override
     public int getPrice() {
         return price;

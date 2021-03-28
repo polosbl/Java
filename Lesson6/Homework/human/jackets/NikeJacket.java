@@ -2,9 +2,6 @@ package Lesson6.Homework.human.jackets;
 
 public class NikeJacket implements IJacket {
 
-    public NikeJacket () {
-    }
-
     @Override
     public void putOn() {
         System.out.println("Надета куртка Nike");

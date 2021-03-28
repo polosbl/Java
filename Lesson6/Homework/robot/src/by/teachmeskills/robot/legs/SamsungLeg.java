@@ -7,9 +7,6 @@ public class SamsungLeg implements ILeg{
         this.price = price;
     }
 
-    public SamsungLeg () {
-    }
-
     @Override
     public int getPrice() {
         return price;

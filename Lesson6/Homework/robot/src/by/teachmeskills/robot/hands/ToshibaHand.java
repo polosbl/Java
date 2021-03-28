@@ -7,9 +7,6 @@ public class ToshibaHand implements IHand{
         this.price = price;
     }
 
-    public ToshibaHand () {
-    }
-
     @Override
     public int getPrice() {
         return price;

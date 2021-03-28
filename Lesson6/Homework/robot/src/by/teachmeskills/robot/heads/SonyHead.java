@@ -7,9 +7,6 @@ public class SonyHead implements IHead {
         this.price = price;
     }
 
-    public SonyHead() {
-    }
-
     @Override
     public void speak() {
         System.out.println("Говорит голова Sony");

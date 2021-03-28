@@ -42,10 +42,12 @@ public class Run {
         System.out.println("Цена робота 3: " + robot3.getPrice());
 
         if (robot1.getPrice() > robot2.getPrice() && robot1.getPrice() > robot3.getPrice()) {
-            System.out.println("Самый дорогой робот 1");
+            System.out.println("Самый дорогой робот 1" + "\n");
         } else if (robot2.getPrice() > robot1.getPrice() && robot2.getPrice() > robot3.getPrice()) {
-            System.out.println("Самый дорогой робот 2");
-        } else if (robot3.getPrice() > robot1.getPrice() && robot3.getPrice() > robot2.getPrice())
+            System.out.println("Самый дорогой робот 2" + "\n");
+        } else if (robot3.getPrice() > robot1.getPrice() && robot3.getPrice() > robot2.getPrice()) {
+            System.out.println("Самый дорогой робот 3" + "\n");
+        }
 
         robot1.action();
         robot2.action();
