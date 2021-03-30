@@ -35,7 +35,7 @@ public class Main {
         System.out.println(StringUtils.isPalindrome("шалаш"));
 
         System.out.println(StringUtils.wow("сделать чудо"));
-        System.out.println(s.contains("aaa"));
+//        System.out.println(s.contains("aaa"));
 
         System.out.println(StringUtils.findMostFrequentChar("abcdaabbabbbccccc"));
 
