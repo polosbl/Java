@@ -111,13 +111,13 @@ public class StringUtils {
 
         int count = 0;
         for (int i = 0; i < chars.length; i++) {
+            count = 0;
             for (int j = 0; j < chars.length; j++) {
                 if (chars[i] == chars[j]) {
                     count++;
                 }
             }
             results[i] = count;
-            count = 0;
         }
 
         int max = results[0];
@@ -142,6 +142,7 @@ public class StringUtils {
 
         int count = 0;
         for (int i = 0; i < chars.length; i++) {
+            count = 0;
             for (int j = 0; j < chars.length; j++) {
                 if (chars[i] == chars[j]) {
                     count++;
@@ -151,7 +152,6 @@ public class StringUtils {
             if (count == 1){
                 break;
             }
-            count = 0;
         }
 
         int minIndex = 0;
