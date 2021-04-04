@@ -1,9 +1,5 @@
 package Lesson7.Homework;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class StringUtils {
     public static String cutString(String s, String a, String b) {
         return s.substring(s.indexOf(a), s.indexOf(b) + 1);
@@ -37,18 +33,11 @@ public class StringUtils {
 
         boolean hasPalindrome = false;
 
-        List<String> words = new ArrayList<>();
+        String[] words = s.split("\\s");
 
-        int j = 0;
-        while (j < s.length()) {
-            words.add(s.substring(j,s.indexOf(' ',j) + 1).trim());
-            j += s.substring(j,s.indexOf(' ',j) + 1).length();
-        }
-
-
-        for (int i = 0; i < words.size(); i++){
-            StringBuilder reversed = new StringBuilder(words.get(i));
-            if (reversed.reverse().toString().equals(words.get(i))){
+        for (int i = 0; i < words.length; i++){
+            StringBuilder reversed = new StringBuilder(words[i]);
+            if (reversed.reverse().toString().equals(words[i])){
                 hasPalindrome = true;
                 break;
             }

@@ -10,8 +10,8 @@ public class Main {
         System.out.println(StringUtils.countWords(" Посчитать  количество слов ф"));
 
         System.out.println(StringUtils.hasPalindrome("qw qqqw wqe qq "));
-//
-//        System.out.println(StringUtils.hasPalindrome("qwerty qwerty qwerty "));
+
+        System.out.println(StringUtils.hasPalindrome("qwerty qwerty qwerty "));
 
 
     }
