@@ -76,5 +76,7 @@ public class Main {
         System.out.println(Collections.evenAndOdd(listOfNumbers1));
         System.out.println(Collections.evenAndOdd2(listOfNumbers1));
 
+        System.out.println(Collections.getCharactersFrequencies("Qqqwertyyyyt"));
+
     }
 }

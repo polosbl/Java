@@ -32,7 +32,8 @@ public class Main {
 
         System.out.println(StringUtils.reverse("abcdef"));
 
-        System.out.println(StringUtils.isPalindrome("шалаш"));
+        System.out.println("Палидром: " + StringUtils.isPalindrome("шалаш"));
+        System.out.println("Палидром: " + StringUtils.isPalindrome("шалаa"));
 
         System.out.println(StringUtils.wow("сделать чудо"));
 //        System.out.println(s.contains("aaa"));

@@ -153,4 +153,18 @@ public class Collections {
         return map;
     }
 
+    public static Map getCharactersFrequencies (String s) {
+        int count;
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            count = 0;
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(i) == s.charAt(j)) {
+                    count++;
+                }
+            }
+            map.put(s.charAt(i),count);
+        }
+        return map;
+    }
 }
