@@ -35,13 +35,18 @@ public class StringUtils {
 //    найти все индексы вхождений числа 20 в строку
     public static int indexes20(String s) {
         int count = 0;
-        char[] chars = new char[s.length()];
-        for (int i = 0; i <chars.length; i++) {
-            chars[i] = s.charAt(i);
-        }
-
-        for (int i = 0;i < s.length(); i++) {
-            if (chars[i] == 50 && chars[i + 1] == 48) {
+//        char[] chars = new char[s.length()];
+//        for (int i = 0; i <chars.length; i++) {
+//            chars[i] = s.charAt(i);
+//        }
+//
+//        for (int i = 0;i < s.length(); i++) {
+//            if (chars[i] == '2' && chars[i + 1] == '0') {
+//                count++;
+//            }
+//        }
+        for (int i = 0; i < s.length(); i++) {
+            if (s.indexOf("2",i) == i && s.indexOf("0",i) == i + 1) {
                 count++;
             }
         }
@@ -97,6 +102,9 @@ public class StringUtils {
         for (int i = 0; i < arrayOfStrings.length; i++) {
             builder.append(arrayOfStrings[i]);
         }
+
+
+
         return builder.toString();
     }
 

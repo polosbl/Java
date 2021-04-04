@@ -20,7 +20,7 @@ public class Main {
         System.out.println(StringUtils.startsWithDigit(s));
 
         s = "202020 aaa 20";
-        System.out.println(StringUtils.indexes20(s));
+        System.out.println("index 20: " + StringUtils.indexes20(s));
 
         String s1 = "111";
         String s2 = "111111111";
